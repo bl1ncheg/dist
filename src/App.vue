@@ -52,7 +52,7 @@ export default {
   mounted() {
     this.initSortable();
   },
-  beforeDestroy() {
+  beforeUnmount() {
     window.removeEventListener('scroll', this.handleScroll);
     if (this.sortable) this.sortable.destroy();
   },
